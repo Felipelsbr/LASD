@@ -1,0 +1,13 @@
+addi $s1, $s2, 9
+ori $s2, $s3, 0
+loop:
+andi $s3, $s2, 1
+beq $zero, $s3, conta
+beq $s1, $s2, fora
+addi $s2, $s2, 1
+j loop
+conta:
+addi $s4, $s4, 1
+addi $s2, $s2, 1
+j loop
+fora:
